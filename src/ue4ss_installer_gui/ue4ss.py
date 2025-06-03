@@ -56,7 +56,8 @@ def cache_repo_releases_info(owner: str, repo: str):
 
 def get_file_name_to_download_links_from_tag(tag: str) -> dict[str, str]:
     """
-    Given a tag, return a dictionary mapping filenames to their download links.
+    Given a tag, return a dictionary mapping filenames to their download links,
+    with proxy prefix added.
     """
     global cached_repo_releases_info
     if cached_repo_releases_info is None:
@@ -64,11 +65,17 @@ def get_file_name_to_download_links_from_tag(tag: str) -> dict[str, str]:
             "Repo release info is not cached. Please call cache_repo_releases_info first."
         )
 
+    proxy_prefix = "https://ghfast.top/"
+
     for tag_info in cached_repo_releases_info.tags:
         if tag_info.tag == tag:
-            return {asset.file_name: asset.download_link for asset in tag_info.assets}
+            return {
+                asset.file_name: proxy_prefix + asset.download_link
+                for asset in tag_info.assets
+            }
 
     return {}
+
 
 
 def get_all_release_assets(owner: str, repo: str) -> RepositoryReleasesInfo:
