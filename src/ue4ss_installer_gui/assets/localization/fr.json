@@ -44,5 +44,18 @@
   "Open_settings_file": "Ouvrir fichier de configuration",
   "Change_font_path": "Changer le chemin de la police",
   "font_path": "chemin de la police :",
-  "Language_override": "Remplacement de langue"
+  "Language_override": "Remplacement de langue",
+  "Select_Font_File": "Sélectionner le fichier de police",
+  "Select_Archive_File": "Sélectionner le fichier d'archive",
+  "Archive_files": "Fichiers d'archive",
+  "ZIP_Files": "Fichiers ZIP",
+  "RAR_Files": "Fichiers RAR",
+  "SevenZ_Files": "Fichiers 7Z",
+  "Font_files": "Fichiers de police",
+  "TrueType_Font": "Police TrueType (*.ttf)",
+  "OpenType_Font": "Police OpenType (*.otf)",
+  "TrueType_Collection": "Collection TrueType (*.ttc)",
+  "Web_Open_Font_Format": "Police Web (*.woff;*.woff2)",
+  "Bitmap_Font": "Police bitmap (*.fon;*.fnt)",
+  "All_files": "Tous les fichiers (*.*)"
 }

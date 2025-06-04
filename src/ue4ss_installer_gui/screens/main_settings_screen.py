@@ -26,23 +26,52 @@ def get_valid_language_options() -> list[str]:
 
 
 def change_font_button_selected(sender, app_data, user_data):
-    if dpg.does_item_exist("font_picker"):
-        dpg.delete_item("font_picker")
-
-    dpg.add_file_dialog(
-        directory_selector=False,
-        show=True,
-        callback=save_new_font,
-        cancel_callback=push_main_settings_screen,
-        tag="font_picker",
-        width=constants.WINDOW_WIDTH - 80,
-        height=constants.WINDOW_HEIGHT - 80,
-        modal=True,
-        file_count=999,
-        user_data=user_data,
-    )
-    dpg.add_file_extension(parent="font_picker", extension=".ttf")
-    dpg.add_file_extension(parent="font_picker", extension=".otf")
+    if sys.platform.startswith("win"):
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.iconbitmap('assets/images/project_main_icon.ico')
+        root.withdraw()
+        file_path = filedialog.askopenfilename(
+            filetypes=[
+                (translator.translator.translate("Font_files"), "*.ttf *.otf *.ttc *.woff *.woff2 *.fon *.fnt"),
+                (translator.translator.translate("TrueType_Font"), "*.ttf"),
+                (translator.translator.translate("OpenType_Font"), "*.otf"),
+                (translator.translator.translate("TrueType_Collection"), "*.ttc"),
+                (translator.translator.translate("Web_Open_Font_Format"), "*.woff;*.woff2"),
+                (translator.translator.translate("Bitmap_Font"), "*.fon;*.fnt"),
+                (translator.translator.translate("All_files"), "*.*")
+            ],
+            title=translator.translator.translate("Select_Font_File")
+        )
+        root.destroy()
+        if file_path:
+            fake_app_data = {"file_path_name": file_path}
+            save_new_font(sender, fake_app_data, user_data)
+        else:
+            push_main_settings_screen()
+    else:
+        if dpg.does_item_exist("font_picker"):
+            dpg.delete_item("font_picker")
+        dpg.add_file_dialog(
+            directory_selector=False,
+            show=True,
+            callback=save_new_font,
+            cancel_callback=push_main_settings_screen,
+            tag="font_picker",
+            width=constants.WINDOW_WIDTH - 80,
+            height=constants.WINDOW_HEIGHT - 80,
+            modal=True,
+            file_count=999,
+            user_data=user_data,
+        )
+        dpg.add_file_extension(parent="font_picker", extension=".ttf")
+        dpg.add_file_extension(parent="font_picker", extension=".otf")
+        dpg.add_file_extension(parent="font_picker", extension=".ttc")
+        dpg.add_file_extension(parent="font_picker", extension=".woff")
+        dpg.add_file_extension(parent="font_picker", extension=".woff2")
+        dpg.add_file_extension(parent="font_picker", extension=".fon")
+        dpg.add_file_extension(parent="font_picker", extension=".fnt")
 
 
 def open_settings_file_in_default_text_editor(sender, app_data, user_data):

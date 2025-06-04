@@ -343,23 +343,50 @@ def push_installing_from_zip_screen(sender, app_data, user_data):
 
 
 def push_installing_from_zip_screen_file_selection(sender, app_data, user_data):
-    if dpg.does_item_exist("zip_picker"):
-        dpg.delete_item("zip_picker")
-
-    dpg.add_file_dialog(
-        directory_selector=False,
-        show=True,
-        callback=push_installing_from_zip_screen,
-        tag="zip_picker",
-        width=constants.WINDOW_WIDTH - 80,
-        height=constants.WINDOW_HEIGHT - 80,
-        modal=True,
-        file_count=999,
-        user_data=user_data,
-    )
-    dpg.add_file_extension(parent="zip_picker", extension=".zip")
-    dpg.add_file_extension(parent="zip_picker", extension=".rar")
-    dpg.add_file_extension(parent="zip_picker", extension=".7z")
+    import sys
+    if sys.platform.startswith("win"):
+        import tkinter as tk
+        from tkinter import filedialog
+        root = tk.Tk()
+        root.iconbitmap('assets/images/project_main_icon.ico')
+        root.withdraw()
+        archive_files = translator.translator.translate("Archive_files")
+        zip_files = translator.translator.translate("ZIP_Files")
+        rar_files = translator.translator.translate("RAR_Files")
+        sevenz_files = translator.translator.translate("SevenZ_Files")
+        all_files = translator.translator.translate("All_files")
+        filetypes = [
+            (archive_files, "*.zip *.rar *.7z"),
+            (zip_files, "*.zip"),
+            (rar_files, "*.rar"),
+            (sevenz_files, "*.7z"),
+            (all_files, "*.*"),
+        ]
+        file_path = filedialog.askopenfilename(
+            filetypes=filetypes,
+            title=translator.translator.translate("Select_Archive_File")
+        )
+        root.destroy()
+        if file_path:
+            fake_app_data = {"file_path_name": file_path}
+            push_installing_from_zip_screen(sender, fake_app_data, user_data)
+    else:
+        if dpg.does_item_exist("zip_picker"):
+            dpg.delete_item("zip_picker")
+        dpg.add_file_dialog(
+            directory_selector=False,
+            show=True,
+            callback=push_installing_from_zip_screen,
+            tag="zip_picker",
+            width=constants.WINDOW_WIDTH - 80,
+            height=constants.WINDOW_HEIGHT - 80,
+            modal=True,
+            file_count=999,
+            user_data=user_data,
+        )
+        dpg.add_file_extension(parent="zip_picker", extension=".zip")
+        dpg.add_file_extension(parent="zip_picker", extension=".rar")
+        dpg.add_file_extension(parent="zip_picker", extension=".7z")
 
 
 def push_installing_screen(sender, app_data, user_data):
