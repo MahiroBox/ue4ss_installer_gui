@@ -44,5 +44,18 @@
   "Open_settings_file": "Abrir archivo de configuración",
   "Change_font_path": "Cambiar ruta de fuente",
   "font_path": "ruta de fuente:",
-  "Language_override": "Sobrescritura de idioma"
+  "Language_override": "Sobrescritura de idioma",
+  "Select_Font_File": "Seleccionar archivo de fuente",
+  "Select_Archive_File": "Seleccionar archivo comprimido",
+  "Archive_files": "Archivos comprimidos",
+  "ZIP_Files": "Archivos ZIP",
+  "RAR_Files": "Archivos RAR",
+  "SevenZ_Files": "Archivos 7Z",
+  "Font_files": "Archivos de fuentes",
+  "TrueType_Font": "Fuente TrueType (*.ttf)",
+  "OpenType_Font": "Fuente OpenType (*.otf)",
+  "TrueType_Collection": "Colección TrueType (*.ttc)",
+  "Web_Open_Font_Format": "Web Open Font Format (*.woff;*.woff2)",
+  "Bitmap_Font": "Fuente de mapa de bits (*.fon;*.fnt)",
+  "All_files": "Todos los archivos (*.*)"
 }

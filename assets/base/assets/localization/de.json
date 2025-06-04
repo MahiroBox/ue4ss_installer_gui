@@ -44,5 +44,18 @@
   "Open_settings_file": "Einstellungsdatei öffnen",
   "Change_font_path": "Schriftartpfad ändern",
   "font_path": "Schriftartpfad:",
-  "Language_override": "Sprachüberschreibung"
+  "Language_override": "Sprachüberschreibung",
+  "Select_Font_File": "Datei für Schriftart auswählen",
+  "Select_Archive_File": "Archivdatei auswählen",
+  "Archive_files": "Archivdateien",
+  "ZIP_Files": "ZIP-Dateien",
+  "RAR_Files": "RAR-Dateien",
+  "SevenZ_Files": "7Z-Dateien",
+  "Font_files": "Schriftdateien",
+  "TrueType_Font": "TrueType-Schrift (*.ttf)",
+  "OpenType_Font": "OpenType-Schrift (*.otf)",
+  "TrueType_Collection": "TrueType-Sammlung (*.ttc)",
+  "Web_Open_Font_Format": "Web-Schriftformat (*.woff;*.woff2)",
+  "Bitmap_Font": "Bitmap-Schrift (*.fon;*.fnt)",
+  "All_files": "Alle Dateien (*.*)"
 }

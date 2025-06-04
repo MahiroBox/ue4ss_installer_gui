@@ -44,5 +44,18 @@
   "Open_settings_file": "Відкрити файл налаштувань",
   "Change_font_path": "Змінити шлях до шрифту",
   "font_path": "шлях до шрифту:",
-  "Language_override": "Заміна мови"
+  "Language_override": "Заміна мови",
+  "Select_Font_File": "Вибрати файл шрифту",
+  "Select_Archive_File": "Вибрати архівний файл",
+  "Archive_files": "Архіви",
+  "ZIP_Files": "ZIP-файли",
+  "RAR_Files": "RAR-файли",
+  "SevenZ_Files": "7Z-файли",
+  "Font_files": "Файли шрифтів",
+  "TrueType_Font": "TrueType шрифт (*.ttf)",
+  "OpenType_Font": "OpenType шрифт (*.otf)",
+  "TrueType_Collection": "Колекція TrueType (*.ttc)",
+  "Web_Open_Font_Format": "Web-шрифт (*.woff;*.woff2)",
+  "Bitmap_Font": "Бітмап шрифт (*.fon;*.fnt)",
+  "All_files": "Всі файли (*.*)"
 }

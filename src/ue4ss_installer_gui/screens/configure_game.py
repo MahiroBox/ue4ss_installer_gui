@@ -679,7 +679,7 @@ def push_configure_game_screen(sender, app_data, user_data):
         ] = {
             "install_button": {
                 dpg.add_button: {
-                    "label": translator.translator.translate("install_button_text"),
+                    "label": translator.translator.translate("install_button_text")+"(启用代理)",
                     "height": 28,
                     "width": -1,
                     "callback": push_installing_screen,

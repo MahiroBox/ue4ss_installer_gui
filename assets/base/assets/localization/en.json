@@ -44,5 +44,18 @@
   "Open_settings_file": "Open settings file",
   "Change_font_path": "Change font path",
   "font_path": "font path:",
-  "Language_override": "Language override"
+  "Language_override": "Language override",
+  "Select_Font_File": "Select Font File",
+  "Select_Archive_File": "Select Archive File",
+  "Font_files": "Font files",
+  "TrueType_Font": "TrueType Font (*.ttf)",
+  "OpenType_Font": "OpenType Font (*.otf)",
+  "TrueType_Collection": "TrueType Collection (*.ttc)",
+  "Web_Open_Font_Format": "Web Open Font Format (*.woff;*.woff2)",
+  "Bitmap_Font": "Bitmap Font (*.fon;*.fnt)",
+  "All_files": "All files (*.*)",
+  "Archive_files": "Archive files",
+  "ZIP_Files": "ZIP files",
+  "RAR_Files": "RAR files",
+  "SevenZ_Files": "7Z files"
 }

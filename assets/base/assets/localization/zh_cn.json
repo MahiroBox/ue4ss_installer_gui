@@ -44,5 +44,18 @@
   "Open_settings_file": "打开设置文件",
   "Change_font_path" : "更改字体路径",
   "font_path" : "字体路径：",
-  "Language_override": "语言覆盖"
+  "Language_override": "语言覆盖",
+  "Select_Font_File": "选择字体文件",
+  "Select_Archive_File": "选择压缩包文件",
+  "Font_files": "字体文件",
+  "TrueType_Font": "TrueType 字体 (*.ttf)",
+  "OpenType_Font": "OpenType 字体 (*.otf)",
+  "TrueType_Collection": "TrueType 字体集 (*.ttc)",
+  "Web_Open_Font_Format": "Web 字体 (*.woff;*.woff2)",
+  "Bitmap_Font": "位图字体 (*.fon;*.fnt)",
+  "All_files": "所有文件 (*.*)",
+  "Archive_files": "压缩包文件",
+  "ZIP_Files": "ZIP 文件",
+  "RAR_Files": "RAR 文件",
+  "SevenZ_Files": "7Z 文件"
 }

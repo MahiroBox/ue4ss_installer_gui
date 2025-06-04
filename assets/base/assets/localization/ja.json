@@ -44,5 +44,18 @@
   "Open_settings_file": "設定ファイルを開く",
   "Change_font_path": "フォントパスを変更",
   "font_path": "フォントパス：",
-  "Language_override": "言語の上書き"
+  "Language_override": "言語の上書き",
+  "Select_Font_File": "フォントファイルを選択",
+  "Select_Archive_File": "アーカイブファイルを選択",
+  "Archive_files": "アーカイブファイル",
+  "ZIP_Files": "ZIPファイル",
+  "RAR_Files": "RARファイル",
+  "SevenZ_Files": "7Zファイル",
+  "Font_files": "フォントファイル",
+  "TrueType_Font": "TrueTypeフォント (*.ttf)",
+  "OpenType_Font": "OpenTypeフォント (*.otf)",
+  "TrueType_Collection": "TrueTypeコレクション (*.ttc)",
+  "Web_Open_Font_Format": "Webフォント (*.woff;*.woff2)",
+  "Bitmap_Font": "ビットマップフォント (*.fon;*.fnt)",
+  "All_files": "すべてのファイル (*.*)"
 }

@@ -52,7 +52,7 @@ used_game_button_strings = set()
 def init_main_screen_header():
     with dpg.group():
         auto_align.add_centered_text(
-            f"{translator.translator.translate('header_text')}",
+            f"{translator.translator.translate('header_text')}""(CN)",
             auto_align.AlignmentType.HORIZONTAL,
             tag="HeaderText",
         )

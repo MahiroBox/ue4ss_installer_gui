@@ -6,6 +6,7 @@ import platform
 from platformdirs import user_config_dir
 
 from ue4ss_installer_gui import (
+    file_io,
     logger,
     steam,
     epic,
@@ -16,11 +17,7 @@ from ue4ss_installer_gui import (
 )
 
 
-config_dir = user_config_dir(appname=constants.APP_TITLE, appauthor="mythical_programs")
-
-os.makedirs(config_dir, exist_ok=True)
-
-SETTINGS_FILE = os.path.join(config_dir, "settings.toml")
+SETTINGS_FILE = os.path.normpath(f"{file_io.SCRIPT_DIR}/settings.toml")
 
 
 # def get_valid_language_options() -> list[str]:
